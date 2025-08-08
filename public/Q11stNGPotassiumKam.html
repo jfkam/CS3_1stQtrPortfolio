@@ -1,13 +1,44 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            body {
+                background: linear-gradient(to bottom, rgb(254, 224, 223), rgb(244, 184, 228),  rgb(244, 186, 228) );
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+                font-size: 20pt;
+                color: rgb(0, 0, 0);
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .center-box {
+                background-color: rgba(255, 255, 255, 0.423);
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 20px;
+                text-align: center;
+                max-width: 600px;
+
+            }
+        </style>
+    </head>
 <body>
+    <div class="center-box" id="candyBox"> </div>
+
     <script>
+        
+
         var age = 14;
         var maxAge = 100;
-        var numPerDay = 15;
+        var avgPerDay = 4;
 
-        var totalRequired = (numPerDay * 365) * (maxAge - age);
+        var totalRequired = (avgPerDay * 365) * (maxAge - age);
 
-        document.write("You will need " + totalRequired + " pieces of candies to last you until the ripe old age of " + maxAge + ".");
+         document.getElementById("candyBox").innerText = "Julia will bedrot for " + totalRequired + " hours until her ripe old age of " + maxAge + ".";
 
 
     </script>
