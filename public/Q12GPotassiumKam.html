@@ -1,0 +1,58 @@
+<html>
+    
+        <h2>  Q1 2nd Graded Exercise Submitted by Julia Kam of 9 - Potassium</h2>
+
+        <style>
+            body {
+                background: linear-gradient(to bottom, rgb(254, 224, 223), rgb(244, 184, 228),  rgb(244, 186, 228) );
+                color: rgb(0, 0, 0);
+                margin: 0;
+                height: 100vh;
+
+            }
+
+
+        </style>
+
+        <div> Meal Price: 
+            <br>
+            <input id ="inp_price" type = "Number">
+        </div>
+
+        <div> Tip: 
+            <br>
+            <input id ="inp_tip" type = "Number">
+            
+        </div>
+
+        <div> Service Charge: 
+            <br>
+            <input id ="inp_serv" type = "Number">
+        </div>
+      
+       <br>
+       <button id = "btn_submit">Accept Input</button>
+
+       <div id = "output_area"></div>
+       
+        <body>
+ 
+        <script>
+            document.getElementById("btn_submit").addEventListener("click", totalMeal);
+             function totalMeal()
+                        {
+                        const mp = Number(document.getElementById("inp_price").value);
+                        const tip =Number(document.getElementById("inp_tip").value);
+                        const sc = Number(document.getElementById("inp_serv").value);
+                        alert(mp);
+                        alert (tip);
+                        alert (sc);
+                        let totalCost = mp + tip + (sc / 100 * mp); 
+                        
+                        document.getElementById("output_area").innerHTML = "Total meal: " + totalCost.toFixed(2);
+                        }
+        
+        </script>
+        </body>
+
+</html>
